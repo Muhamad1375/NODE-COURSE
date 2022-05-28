@@ -1,15 +1,9 @@
-const validator = require('validator')
-const getNotes = require('./notes.js')
+import chalk from 'chalk';
 
 
 
-const msg = getNotes()
 
-console.log(msg)
-
-console.log(validator.isURL('ali.'))
-
-
+console.log(chalk.bold.green('sucsess'))
 
 
 

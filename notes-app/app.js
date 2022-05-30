@@ -1,10 +1,11 @@
 const chalk = require('chalk')
+const { argv } = require('yargs')
 const yargs = require('yargs')
 const notes = require('./notes')
 
 //customize yargs version
 yargs.version('1.1.0')
-
+//از یارگ برای ورژن دادن و اینتراکتیو کردن دارم استفاده میکنم
 //create add command
 yargs.command({
       command: 'add',
@@ -29,9 +30,15 @@ yargs.command({
 yargs.command({
       command: 'remove',
       describe: 'remove a note',
+      builder: {
+            title: {
+                  describe: 'Note remove',
+                  demandOption: true,
+                  type: 'string'
+            }
+      },
       handler: function () {
-            console.log('Removing the note')
-
+            notes.removeNote(argv.title)
       }
 })
 
@@ -52,6 +59,7 @@ yargs.command({
             console.log('Listing out all notes')
       }
 })
+
 
 //add,removemread,list
 

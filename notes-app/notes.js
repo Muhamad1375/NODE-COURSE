@@ -3,21 +3,21 @@ const chalk = require('chalk')
 
 
 //یه متن ساده رو برمیگردونه
-const getNotes = function () {
-      return 'your notes...'
-}
+const getNotes = () => 'your notes...'
 
 
 
 
-const addNote = function (title, body) {
+const addNote = (title, body) => {
       //لود نوت فانکشن اون پایین منه که داره یه متن از نوت جیسون میخونه پارس میکنه و اگه متنی نباشه یه ارایه خالی میده
       // برای اینکه میخوام اجازه درست کردن لیست تکراری بهم نده و با اون لود نوت که قراره انچه من نوشتم رو برگردونه و اینجا میخوام بلا سرش بیارم
       //میگم لود نوت و بریز توی یه متغیر اون متغیر و فیلتر کن و اگر تایتلش با تایتل اون تو مساوی بود ننویس اگه نبود بنویس
       const notes = loadNotes()
-      const duplicateNotes = notes.filter(function(note) {
-            return note.title === title
-      })
+      const duplicateNotes = notes.filter((note) => note.title === title)
+
+      // const duplicateNotes = notes.filter(function (note) {
+      //       return note.title === title
+      // })
 
       if (duplicateNotes.length === 0) {
             notes.push({
@@ -36,11 +36,9 @@ const addNote = function (title, body) {
 
 
 //remove note
-const removeNote = function (title) {
+const removeNote =  (title) =>  {
       const notes = loadNotes()
-      const notesToKeep = notes.filter(function (note){
-      return note.title !== title 
-      })
+      const notesToKeep = notes.filter((note) => note.title !== title)
 
 //این شرط و شرط بالا رو بررسی کنم
       if (notes.length > notesToKeep.length) {
@@ -79,14 +77,14 @@ const removeNote = function (title) {
 }
 
 //انچه که من در ترمینال میزنم با این داره سیو میشه توی نوت جیسون گفتم هر چی اونجا زدم با این پارس کن و رایت کن توی نوت جیسون
-const saveNotes = function (notes) {
+const saveNotes = (notes) => {
       const dataJSON = JSON.stringify(notes)
       fs.writeFileSync('notes.json', dataJSON)
 }
 
 
 
-const loadNotes = function () {
+const loadNotes = () => {
       //ترای و کچ و گذاشتم که ارور طولانی نده و بجای ارور متن نداشتن برای ارایه خالی بده
  try {
       const dataBuffer = fs.readFileSync('notes.json')

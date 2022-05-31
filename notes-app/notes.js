@@ -7,7 +7,6 @@ const addNote = (title, body) => {
       //میگم لود نوت و بریز توی یه متغیر اون متغیر و فیلتر کن و اگر تایتلش با تایتل اون تو مساوی بود ننویس اگه نبود بنویس
       const notes = loadNotes()
       const duplicateNote = notes.find((note) => note.title === title)
-
       // const duplicateNotes = notes.filter(function (note) {
       //       return note.title === title
       // })

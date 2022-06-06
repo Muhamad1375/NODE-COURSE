@@ -15,6 +15,7 @@ geocode(address, (error, {latitude, longtitude, location}) => {
 
  forecast(latitude,longtitude, (error, forecastData) => {
        if (error) {
+             
              return console.log(error)
        }
        console.log(location)

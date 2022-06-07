@@ -8,17 +8,25 @@ app.get('', (req, res) => {
 
 
 app.get('/help', (req, res) => {
-      res.send('Help page')
+      res.send([{
+            name: 'Andrew'
+      },
+{
+      name: 'sara'
+}])
 })
 
 app.get('/about', (req, res) => {
-      res.send('About page')
+      res.send('<h1>About</h1>')
 })
+
 
 app.get('/weather', (req, res) => {
-      res.send('View weather page')
+      res.send({
+            forecast: 'It is snowing',
+            location: 'Philadelphia'
+      })
 })
-
 
 app.listen(3000 , () => {
       console.log('Server is up on port 3000')

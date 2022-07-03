@@ -11,6 +11,8 @@ body {
 }
 
 .main-content {
+    display: flex;
+    flex-direction: column;
       flex-grow: 1;
 }
 
@@ -39,4 +41,41 @@ header a {
 
 .portrait {
       width: 250px;
+}
+
+.textbox {
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+#container {
+    margin-top: 2rem;
+    opacity: 0;
+    background-color: #e6f4f3;
+    padding: 3rem;
+    border-radius: 15px;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+
+.icon-container {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.timezone-container {
+    border-radius: 15px;
+    padding: 1rem;
+    margin-left: 2rem;
+    flex: 1;
+    font-size: 2rem;
+    font-weight: bold;
 }

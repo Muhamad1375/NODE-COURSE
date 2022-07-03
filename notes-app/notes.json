@@ -1,1 +1,18 @@
-[{"title":"list1","body":"sugar,shorts,shots,shoots,schmidt"},{"title":"list2","body":"cheese"}]
+[
+  {
+    "title": "list1",
+    "body": "sugar,shorts,shots,shoots,schmidt"
+  },
+  {
+    "title": "list2",
+    "body": "cheese"
+  },
+  {
+    "title": "Ali haqiqi",
+    "body": "shop groceries"
+  },
+  {
+    "title": "server stuff",
+    "body": "reset server"
+  }
+]

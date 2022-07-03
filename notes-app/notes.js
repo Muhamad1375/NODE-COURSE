@@ -70,7 +70,7 @@ const removeNote =  (title) =>  {
 
 //انچه که من در ترمینال میزنم با این داره سیو میشه توی نوت جیسون گفتم هر چی اونجا زدم با این پارس کن و رایت کن توی نوت جیسون
 const saveNotes = (notes) => {
-      const dataJSON = JSON.stringify(notes)
+      const dataJSON = JSON.stringify(notes, null, 2)
       fs.writeFileSync('notes.json', dataJSON)
 }
 
